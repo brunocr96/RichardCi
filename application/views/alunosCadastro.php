@@ -1,30 +1,45 @@
 <div class="row">
     <div class="col-lg-3 col-md-3 col-3"></div>
     <div class="col-lg-6 col-md-6 col-6">
-			
-	<form method="post" style="text-align: center;" class="form-inline">
-					
-	<div class="form-group">	
-            <input name = "Id_Aluno"  class="form-control" type = "text" id = "Id_Aluno" size="3" maxlength="2" placeholder="    ID">
-	</div>
-					
-	<input name = "delete" type = "submit" id = "delete" value = "Deletar" class="btn btn-warning"> <p>
-            
-	<div class="form-group">
-            <input name="Id_Aluno" class="form-control" type="text" id = "Id_Aluno" size="2" maxlength="2" placeholder="    ID">
-	</div>
-					
-	<input name = "update" type = "submit" id = "update" value = "Atualizar" class="btn btn-danger"> <br><br><br>
-											
-	<div class="form-group">	
-            <input type="text" class="form-control" name="nome" placeholder="Digite o nome ...">
-	</div>	
+        <h1 class="jumbotron-heading">Cadastro de Alunos</h1><p></p>
+        <?php echo form_open('alunos/inserir'); ?>
+        <div class="form-group">
+            <input type="text" class="form-control form-control-lg" name="nome" placeholder="Nome" />
+        </div>
         
-	<input name="pesquisar" type="submit" value="Pesquisar" class="btn btn-primary"> <br><br>
-						
-	<input name="todos" type="submit" value="Listar Todos" class="btn btn-success"> <br><br>
-							
-	</form>
-</div>
+        <div class="form-group">
+            <input type="text" class="form-control form-control-lg" name="rg" placeholder="Rg" />
+        </div>
+        
+        <div class="form-group">
+        <input type="text" class="form-control form-control-lg" name="endereco" placeholder="Endereco" />
+        </div>
+        
+        <div class="form-group">
+            <input type="text" class="form-control form-control-lg" name="cpf" placeholder="Cpf" />
+        </div>
+        
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sexo" id="inlineRadio1" value="Feminino">
+            <label class="form-check-label" for="inlineRadio1">Feminino</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sexo" id="inlineRadio2" value="Masculino">
+            <label class="form-check-label" for="inlineRadio2">Masculino</label>
+        </div>
+        
+        <div class="form-group">
+            <input type="submit" name="acao" value="salvar" class="btn btn-success" />
+        </div>
+        
+        <div class="form-group">
+            <input type="reset" class="btn btn-danger" /><p></p>
+        </div>
+        
+        <div class="form-group">
+            <a class="btn btn-primary" href="<?php base_url(); ?>Home" id="cancelar">Cancelar</a>
+        </div>
+        <?php form_close(); ?>
+    </div>
     <div class="col-lg-3 col-md-3 col-3"></div>
     </div>
