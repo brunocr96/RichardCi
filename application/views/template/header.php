@@ -12,8 +12,8 @@
         <!-- JS -->
         <link href="<?php echo base_url('assets/js/bootstrap.min.js') ?>" 
               rel="stylesheet">
-        
-        <script src="<?php echo base_url('assets/js/jquery.min.js') ?>"></script>
+
+        <script src="<?php echo base_url('DataTables/jquery.min.js') ?>"></script>
 
         <!-- Data Tables -->
         <!-- On Line -->
@@ -26,12 +26,14 @@
         <!-- On Line -->
         <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
         <!-- Off Line / Local -->
-        
+
 
     </head>
+
     <body>
         <div class="container">
-            
+            <?php if ($this->session->userdata('estou_logado')) {
+                ?>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand" href="#">Projeto Tin N5 - Senac GRV</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,10 +54,13 @@
                                     <a class="dropdown-item" href="#">Professor</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="<?php echo base_url(); ?>usuario">Usuário</a>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" href="<?php echo base_url(); ?>login/sair" tabindex="-1" aria-disabled="true">Sair</a>
+                                    </li>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                    
                 </nav>
-            
+            <?php } ?>

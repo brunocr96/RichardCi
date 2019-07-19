@@ -31,6 +31,10 @@
         <div class="form-group">
             <input type="submit" name="acao" value="salvar" class="btn btn-success" />
         </div>
+        
+        <div class="form-group">
+        <a class="btn btn-info" id="btn-lista" href="#">Listar Contatos</a>
+        </div>
 
         <div class="form-group">
             <input type="reset" class="btn btn-danger" /><p></p>
@@ -44,7 +48,7 @@
     </div>
     <div class="col-lg-3 col-md-3 col-3"></div>
 </div>
-<div class="row">
+<div id="div-lista" class="hide row">
     <div class="col-lg-2 col-md-2 col-2"></div>
     <div class="col-lg-7 col-md-7 col-7">
 
@@ -82,4 +86,9 @@
     </div>
     <div class="col-lg-3 col-md-3 col-3"></div>
 </div>
+<script>
+      $("#btn-lista").click(function () {
+        $("#div-lista").toggleClass("hide");
+    });
+</script>  
 
